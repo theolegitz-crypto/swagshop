@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 5px;
+}
+
+body {
+    background: #000000;
+    color: #E9E9E9;
+    font-family: "BBH Sans Bartle", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+header {
+    position: relative
+}
+.wrapper {
+    width: 1280px;
+    margin: 50px auto;
+}
+
+header ul.nav {
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    float: right;
+    list-style: none;
+}
+
+header ul.nav li{
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+    
+}
+
+header ul.nav li:hover{
+    opacity: 0.5;
+}
+
+header .shop-cart-button {
+    float:right;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+
+header .shop-cart {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 450px;
+    background: white;
+    -webkit-box-shadow: 1px 3px 17px 9px #525252; 
+    box-shadow: 1px 3px 17px 9px #525252;
+    z-index: 1000;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+header .shop-cart .empty h2{
+    font-family: "Unbounded", sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+header .shop-cart .item{
+    font-family: "Unbounded", sans-serif;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+
+}
+
+header .shop-cart .item img {
+    width: 70px;
+    float:left;
+    margin-right: 20px;
+}
+
+header .shop-cart .item h2{
+    color: #131313;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+header .shop-cart .item b{
+    color: #131313;
+    font-weight: 600;
+}
+header .shop-cart .item p{
+    color: #131313;
+    font-weight: 600;
+}
+
+header .shop-cart-button:hover,header .shop-cart-button.active{
+    color: gray;
+    transform: scale(1.5);
+}
+
+header .shop-cart .item .delete-icon {
+    color:#525252;
+    float: right;
+    position: relative;
+    top: -25px;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+
+header .shop-cart .item .delete-icon:hover{
+    color: #000000;
+    transform: scale(1.5);
+}
+
+header .shop-cart .summa{
+    font-family: "Unbounded", sans-serif;
+    color: #000000;
+    float:left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+header .logo{
+    
+    font-weight: 100;
+    font-size: 20px;
+}
+
+
+
+header .presentation{
+    margin: 50px 0;
+    background: url('./img/bg.jpg') no-repeat; 
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color:gainsboro;
+    position: relative;
+}
+
+header .presentation::after{
+    content: 'Aavant-garde luxe clothes';
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 300px;
+    font-size: 80px;
+    font-weight: 1000px;
+}
+
+header .presentation::before{
+    font-family: "Unbounded", sans-serif;
+    content: 'from all over the world';
+    position: relative;
+    top: 500px;
+    left: 100px;
+    width: 300px;
+    font-size: 115px;
+    font-weight: 15px;
+}
+
+.categories div {
+    display: inline-block;
+    background: #282828;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    cursor:pointer;
+    border: 1px solid transparent;
+    transition: all 500ms ease;
+}
+
+.categories div:hover{
+    border-color: silver;
+    transform: scale(1.1);
+}
+
+.full-item {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    overflow: auto;
+
+}
+
+.full-item > div {
+    width: 900px;
+    position: relative;
+    margin: 10% auto;
+    padding: 40px 30px;
+    background: #222222;
+    border-radius: 10px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+main .item {
+    width: 20%;
+    margin-bottom: 50px;
+    background: #131313;
+    position: relative;
+    padding-bottom: 20px;
+    
+}
+main .item img:hover, .full-item img:hover{
+    transform: scale(1.03)
+}
+
+main .item img,
+.full-item img{
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    transition: transform 500ms ease;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+main b, .full-item b{
+    font-size: 35px;
+}
+main h2, main p, main b,.full-item b, .full-item h2, .full-item p{
+    font-family: "Unbounded", sans-serif;
+    margin:10px 20px;
+    
+}
+main .add-to-cart,
+.full-item .add-to-cart {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #EFEFEF;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 35px;
+    font-weight: 500;
+    transition: transform 500ms ease;
+}
+main .add-to-cart:hover,
+.full-item .add-to-cart:hover{
+    transform: scale(1.25) translateY(-5px);
+
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+}
