@@ -123,7 +123,7 @@ class App extends React.Component{
                 title: 'Куртка Rick Owens Gimp Down',
                 img: 'rick-owens-puhovik.jpg',
                 desc: 'Теплая куртка высокой моды.',
-                category: 'sweatshirts',
+                category: 'jackets',
                 price: '1799.99'
               }
       ],
